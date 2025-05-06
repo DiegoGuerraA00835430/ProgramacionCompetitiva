@@ -1,0 +1,24 @@
+// Ranferi Márquez Puig A00832626
+
+#include <iostream>
+#include <string>
+#include <set>
+using namespace std;
+
+int main() {
+    string nombre;
+    cin >> nombre;
+
+    set<char> caracteres_distintos;
+    for (char letra : nombre) {
+        caracteres_distintos.insert(letra);
+    }
+
+    if (caracteres_distintos.size() % 2 == 0) {
+        cout << "CHAT WITH HER!" << endl;
+    } else {
+        cout << "IGNORE HIM!" << endl;
+    }
+
+    return 0;
+}
