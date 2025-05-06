@@ -1,0 +1,33 @@
+// Ranferi Márquez Puig
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Función para verificar si un número es justo
+bool esJusto(long long x) {
+    long long temp = x;
+    while (temp > 0) {
+        int digito = temp % 10;
+        if (digito != 0 && x % digito != 0)
+            return false;
+        temp /= 10;
+    }
+    return true;
+}
+
+int main() {
+    int t;
+    cin >> t;
+
+    while (t--) {
+        long long n;
+        cin >> n;
+        while (!esJusto(n)) {
+            n++;
+        }
+        cout << n << endl;
+    }
+
+    return 0;
+}
